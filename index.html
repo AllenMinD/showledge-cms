@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>秀知识 | 控制台</title>
+
+    <!-- Bootstrap -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!--头部菜单栏-->
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">秀知识</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Setting</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">你好，张三 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">编辑我的个人资料</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">登出</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+
+    <!--网页主要内容-->
+    <div class="container-fluid">
+      <div class="row">
+        <!--左侧导航栏-->
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li>
+              <a href="#" class="" id="all-user">全部用户</a>
+            </li>
+            <li>
+              <a href="#" class="" id="all-passage">全部文章</a>
+            </li>
+            <li>
+              <a href="#" class="" id="all-topic">全部专题</a>
+            </li>
+            <li>
+              <a href="#" class="" id="good-passage">精选文章</a>
+            </li>
+            <li>
+              <a href="#" class="" id="good-topic">精选专题</a>
+            </li>
+          </ul>
+        </div>      
+        <!--dashboard内容-->
+        <div class="col-sm-9 col-md-10">
+          <!-- 4:3 aspect ratio -->
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="welcome.html"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="dist/js/bootstrap.min.js"></script>
+
+    <script>
+      window.onload = function(){
+        $("#all-user").click(function(){
+          $("iframe").attr("src", "user.html")
+        });
+        $("#all-passage").click(function(){
+          $("iframe").attr("src", "passage.html")
+        });
+        $("#all-topic").click(function(){
+          $("iframe").attr("src", "topic.html")
+        });
+        $("#good-passage").click(function(){
+          $("iframe").attr("src", "good-passage.html")
+        });
+        $("#good-topic").click(function(){
+          $("iframe").attr("src", "good-topic.html")
+        });
+      }
+    </script>
+  </body>
+</html>
